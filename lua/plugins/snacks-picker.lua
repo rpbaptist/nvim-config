@@ -1,8 +1,5 @@
 return {
 	"folke/snacks.nvim",
-	dependencies = {
-		"xvzc/chezmoi.nvim",
-	},
 	lazy = false,
 	opts = {
 		explorer = { enabled = true },
@@ -184,8 +181,7 @@ return {
 		{
 			"<leader>fc",
 			function()
-				local opts = require("utils.chezmoi-custom").picker_opts(".config/nvim/")
-				Snacks.picker.pick(opts)
+				Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
 			end,
 			desc = "Find Config File",
 		},
@@ -430,14 +426,6 @@ return {
 				Snacks.picker.colorschemes()
 			end,
 			desc = "Colorschemes",
-		},
-		{
-			"<leader>sz",
-			function()
-				local opts = require("utils.chezmoi-custom").picker_opts()
-				Snacks.picker.pick(opts)
-			end,
-			desc = "Chezmoi",
 		},
 	},
 }

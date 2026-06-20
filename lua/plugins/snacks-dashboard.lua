@@ -1,8 +1,5 @@
 return {
 	"folke/snacks.nvim",
-	dependencies = {
-		"xvzc/chezmoi.nvim",
-	},
 	cmd = "Snacks",
 	lazy = false,
 	opts = {
@@ -31,8 +28,7 @@ return {
 						key = "c",
 						desc = "Config",
 						action = function()
-							local opts = require("utils.chezmoi-custom").picker_opts(".config/nvim/")
-							Snacks.picker.pick(opts)
+							Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
 						end,
 					},
 					{
