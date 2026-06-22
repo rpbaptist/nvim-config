@@ -12,6 +12,8 @@ return {
         ["@punctuation.bracket.elixir"] = { fg = "#d3869b" },
         ["@punctuation.special.elixir"] = { fg = "#d3869b" },
         ["@module.elixir"] = { fg = "#fabd2f" },
+        gitcommitSummary = { fg = "#8ec07c" },
+        gitcommitBlank = { fg = "#8ec07c" },
         GitSignsAdd = { fg = "#8ec07c" },
         GitSignsChange = { fg = "#d79921" },
         GitSignsDelete = { fg = "#fb4934" },
