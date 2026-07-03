@@ -71,7 +71,9 @@ return {
 					local file_path = vim.fn.expand("%")
 					local run = {
 						ruby = function()
-							ruby_tests:send({ "rake test TEST=" .. file_path }, { action = "open" })
+							local cmd = file_path:match("_spec%.rb$") and ("bundle exec rspec " .. file_path)
+								or ("rake test TEST=" .. file_path)
+							ruby_tests:send({ cmd }, { action = "open" })
 						end,
 						elixir = function()
 							iex_tests:start()
