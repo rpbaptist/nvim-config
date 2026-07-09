@@ -393,6 +393,11 @@ if vim.lsp.inlay_hint then
 	Snacks.toggle.inlay_hints():map("<leader>uh")
 end
 
+local del_augroup = vim.api.nvim_del_augroup_by_id
+vim.api.nvim_del_augroup_by_id = function(group)
+  pcall(del_augroup, group)
+end
+
 vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()
 		if vim.fn.argc() == 0 then
