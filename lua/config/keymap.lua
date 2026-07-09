@@ -1,12 +1,3 @@
-Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>us")
-Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
-Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>uL")
-Snacks.toggle.diagnostics():map("<leader>ud")
-Snacks.toggle.line_number():map("<leader>ul")
-if vim.lsp.inlay_hint then
-	Snacks.toggle.inlay_hints():map("<leader>uh")
-end
-
 local set = vim.keymap.set
 
 set("n", "<A-v>", "<C-v>")
@@ -110,8 +101,8 @@ set("v", ">", ">gv")
 set("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Below" })
 set("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>", { desc = "Add Comment Above" })
 
--- lazy
-set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+-- packages
+set("n", "<leader>l", "<cmd>PackStatus<cr>", { desc = "Package Status" })
 
 -- new file
 set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
