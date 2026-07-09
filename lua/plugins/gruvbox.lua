@@ -15,6 +15,7 @@ return {
         gitcommitSummary = { fg = "#8ec07c" },
         gitcommitBlank = { fg = "#8ec07c" },
         GitSignsAdd = { fg = "#8ec07c" },
+        Fugit2Staged = { fg = "#8ec07c", bold = true },
         GitSignsChange = { fg = "#d79921" },
         GitSignsDelete = { fg = "#fb4934" },
         DiffAdd = { fg = "#fbf1c7", bg = "#98971a" },
