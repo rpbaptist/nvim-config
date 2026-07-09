@@ -1,6 +1,5 @@
 vim.pack.add({
 	{ src = "https://github.com/arborist-ts/arborist.nvim" },
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter-context" },
 }, { confirm = false })
 
 require("arborist").setup({
@@ -32,13 +31,3 @@ vim.filetype.add({
 		["%.env%.[%w_.-]+"] = "sh",
 	},
 })
-
-vim.treesitter.language.register("bash", "kitty")
-vim.treesitter.language.register("markdown", "livebook")
-
-pcall(function()
-	require("treesitter-context").setup({
-		mode = "cursor",
-		max_lines = 3,
-	})
-end)
