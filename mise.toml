@@ -1,2 +1,3 @@
 [tools]
+# Important for image.nvim
 lua = "5.1"
