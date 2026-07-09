@@ -392,3 +392,12 @@ Snacks.toggle.line_number():map("<leader>ul")
 if vim.lsp.inlay_hint then
 	Snacks.toggle.inlay_hints():map("<leader>uh")
 end
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		if vim.fn.argc() == 0 then
+			require("snacks").dashboard()
+		end
+	end,
+	once = true,
+})
