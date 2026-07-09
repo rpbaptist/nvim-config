@@ -3,6 +3,10 @@ vim.pack.add({
   { src = "https://github.com/rafamadriz/friendly-snippets" },
 }, { confirm = false })
 
+require("utils.pack-build").on_build("blink.cmp", function(path)
+  vim.fn.system({ "cargo", "build", "--release" }, { cwd = path })
+end)
+
 require("blink.cmp").setup({
   fuzzy = { implementation = "prefer_rust_with_warning" },
   snippets = { preset = "luasnip" },

@@ -3,6 +3,11 @@ vim.pack.add({
   { src = "https://github.com/iamcco/markdown-preview.nvim", name = "markdown-preview.nvim" },
 }, { confirm = false })
 
+require("utils.pack-build").on_build("markdown-preview.nvim", function()
+  vim.cmd.packadd("markdown-preview.nvim")
+  pcall(vim.fn["mkdp#util#install"])
+end)
+
 require("render-markdown").setup({
   code = {
     sign = true,

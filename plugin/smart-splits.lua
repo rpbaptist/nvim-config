@@ -2,6 +2,10 @@ vim.pack.add({
   { src = "https://github.com/mrjones2014/smart-splits.nvim", name = "smart-splits.nvim" },
 }, { confirm = false })
 
+require("utils.pack-build").on_build("smart-splits.nvim", function(path)
+  vim.fn.system({ "./kitty/install-kittens.bash" }, { cwd = path })
+end)
+
 require("smart-splits").setup({
   at_edge = "stop",
   cursor_follows_swapped_bufs = true,
