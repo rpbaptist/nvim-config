@@ -45,7 +45,6 @@ return {
 				"xml",
 				"yaml",
 				"git_config",
-				event = { "BufReadPost", "BufNewFile" },
 			})
 
 			vim.filetype.add({
@@ -61,16 +60,15 @@ return {
 			vim.treesitter.language.register("bash", "kitty")
 			vim.treesitter.language.register("markdown", "livebook")
 
-			vim.api.nvim_create_autocmd("FileType", { -- enable treesitter highlighting and indents
+			vim.api.nvim_create_autocmd("FileType", {
 				group = vim.api.nvim_create_augroup("treesitter-config", { clear = true }),
 				callback = function(ev)
-					local filetype = ev.match
-					local lang = vim.treesitter.language.get_lang(filetype)
-					if vim.treesitter.language.add(lang) then
+					local lang = vim.treesitter.language.get_lang(ev.match)
+					if lang and vim.treesitter.language.add(lang) then
 						vim.wo.foldmethod = "expr"
 						vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 						vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-						vim.treesitter.start()
+						vim.treesitter.start(ev.buf, lang)
 					end
 				end,
 			})
