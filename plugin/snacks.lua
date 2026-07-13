@@ -402,3 +402,48 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 	once = true,
 })
+
+-- Workaround: Snacks picker throttles preview updates by 60ms
+-- (lua/snacks/util/init.lua M.throttle, used in picker.lua's
+-- _throttled_preview). Navigating the list and confirming a selection
+-- within that window lets the trailing throttled call fire after the
+-- picker has already closed: it recreates the preview as a fresh
+-- full-editor floating window holding the real (already-listed) target
+-- buffer, instead of that buffer landing in the normal split like it
+-- should. Nothing ever closes this float, so it sits on top of the real
+-- window and swallows the whole UI (upstream race condition, still
+-- present as of snacks.nvim 882c996). Repair it: when we land in a
+-- floating window that covers the whole editor while a normal split
+-- exists underneath, move its buffer into that split and close the float.
+vim.api.nvim_create_autocmd({ "BufEnter", "WinEnter" }, {
+	group = vim.api.nvim_create_augroup("snacks_picker_preview_cleanup", { clear = true }),
+	callback = function()
+		vim.schedule(function()
+			local win = vim.api.nvim_get_current_win()
+			if not vim.api.nvim_win_is_valid(win) then
+				return
+			end
+			local cfg = vim.api.nvim_win_get_config(win)
+			if cfg.relative == "" or cfg.width ~= vim.o.columns or cfg.height ~= vim.o.lines then
+				return
+			end
+			local buf = vim.api.nvim_win_get_buf(win)
+			if vim.bo[buf].buftype ~= "" or not vim.bo[buf].buflisted then
+				return
+			end
+			local target
+			for _, w in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+				if w ~= win and vim.api.nvim_win_get_config(w).relative == "" then
+					target = w
+					break
+				end
+			end
+			if not target then
+				return
+			end
+			vim.api.nvim_win_set_buf(target, buf)
+			vim.api.nvim_win_close(win, true)
+			vim.api.nvim_set_current_win(target)
+		end)
+	end,
+})
