@@ -1,13 +1,13 @@
 vim.pack.add({
-  { src = "https://github.com/gbprod/yanky.nvim" },
+	{ src = "https://github.com/gbprod/yanky.nvim" },
 }, { confirm = false })
 
 require("yanky").setup({
-  highlight = { timer = 150 },
+	highlight = { timer = 150 },
 })
 
-vim.keymap.set({ "n", "x" }, "<leader>p", function()
-  Snacks.picker.yanky()
+vim.keymap.set({ "n", "x" }, "<leader>P", function()
+	Snacks.picker.yanky()
 end, { desc = "Open Yank History" })
 
 vim.keymap.set({ "n", "x" }, "y", "<Plug>(YankyYank)", { desc = "Yank Text" })

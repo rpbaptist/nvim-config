@@ -1,6 +1,5 @@
 vim.pack.add({
   { src = "https://github.com/nanozuki/tabby.nvim" },
-  { src = "https://github.com/nvim-mini/mini.nvim" },
 }, { confirm = false })
 
 require("tabby").setup({

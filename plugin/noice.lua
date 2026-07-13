@@ -1,6 +1,5 @@
 vim.pack.add({
   { src = "https://github.com/folke/noice.nvim" },
-  { src = "https://github.com/rpbaptist/nui.nvim", version = "fix-invalid-window-id" },
   { src = "https://github.com/rcarriga/nvim-notify" },
 }, { confirm = false })
 

@@ -1,8 +1,5 @@
 vim.pack.add({
   { src = "https://github.com/nvim-lualine/lualine.nvim" },
-  { src = "https://github.com/chrisgrieser/nvim-recorder" },
-  { src = "https://github.com/nvim-mini/mini.diff" },
-  { src = "https://github.com/SmiteshP/nvim-navic" },
 }, { confirm = false })
 
 local recording_status = function()

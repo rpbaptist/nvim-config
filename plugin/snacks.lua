@@ -265,10 +265,6 @@ vim.keymap.set("n", "<leader>fR", function()
 	Snacks.picker.recent({ filter = { cwd = true } })
 end, { desc = "Recent (cwd)" })
 
-vim.keymap.set("n", "<leader>fp", function()
-	Snacks.picker.projects()
-end, { desc = "Projects" })
-
 vim.keymap.set("n", "<leader>gc", function()
 	Snacks.picker.git_branches({ preview = false })
 end, { desc = "Git branches" })
@@ -395,7 +391,7 @@ end
 
 local del_augroup = vim.api.nvim_del_augroup_by_id
 vim.api.nvim_del_augroup_by_id = function(group)
-  pcall(del_augroup, group)
+	pcall(del_augroup, group)
 end
 
 vim.api.nvim_create_autocmd("VimEnter", {
