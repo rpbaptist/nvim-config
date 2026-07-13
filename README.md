@@ -1,6 +1,6 @@
 # nvim
 
-Personal Neovim config, managed with [vim.pack](https://github.com/folke/vim.pack.nvim) (Neovim 0.11+ built-in `vim.pack`).
+Personal Neovim config, managed with Neovim's built-in `vim.pack` (requires Neovim 0.12+).
 
 ## Structure
 
