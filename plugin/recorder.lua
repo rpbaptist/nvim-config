@@ -1,5 +1,6 @@
 vim.pack.add({
   { src = "https://github.com/chrisgrieser/nvim-recorder" },
+  { src = "https://github.com/folke/which-key.nvim" },
 }, { confirm = false })
 
 require("recorder").setup({
@@ -13,8 +14,10 @@ require("recorder").setup({
   },
 })
 
-vim.keymap.set("n", "<leader>rr", "", { desc = "Start/stop recording" })
-vim.keymap.set("n", "<leader>rs", "", { desc = "Switch slot" })
-vim.keymap.set("n", "<leader>re", "", { desc = "Edit macro" })
-vim.keymap.set("n", "<leader>rd", "", { desc = "Delete all macros" })
-vim.keymap.set("n", "<leader>ry", "", { desc = "Yank macro" })
+require("which-key").add({
+  { "<leader>rr", desc = "Start/stop recording" },
+  { "<leader>rs", desc = "Switch slot" },
+  { "<leader>re", desc = "Edit macro" },
+  { "<leader>rd", desc = "Delete all macros" },
+  { "<leader>ry", desc = "Yank macro" },
+})
