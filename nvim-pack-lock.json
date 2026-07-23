@@ -34,7 +34,7 @@
       "src": "https://github.com/waiting-for-dev/ergoterm.nvim"
     },
     "flash.nvim": {
-      "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",
+      "rev": "b6346946d10d07998efee029fb0f7a593806d0cd",
       "src": "https://github.com/folke/flash.nvim"
     },
     "friendly-snippets": {
@@ -46,7 +46,7 @@
       "src": "https://github.com/SuperBo/fugit2.nvim"
     },
     "grug-far.nvim": {
-      "rev": "c69859c1d5427ab5fc7ed12380ab521b4e336691",
+      "rev": "0f6a5d0d7a70659b11bbcd6b3673ee0fe61b6024",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
     "gruvbox.nvim": {
@@ -74,7 +74,7 @@
       "src": "https://github.com/iamcco/markdown-preview.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "47059d71b42d74b0a1e9f61c1d99d301039c3b5b",
+      "rev": "7adc933dabcc7c86ae6b07aff7ee68eac398491f",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason.nvim": {
@@ -82,11 +82,11 @@
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.ai": {
-      "rev": "6d43e74cae75771b780a7270fec1f160613ed873",
+      "rev": "25248c6aa002391936a6200f12d1466015987133",
       "src": "https://github.com/nvim-mini/mini.ai"
     },
     "mini.diff": {
-      "rev": "be4ca6953040332d77a5a05bb5600152c5c36e7a",
+      "rev": "b3d8507929f8df54ab9b08c77564c1afd7d62110",
       "src": "https://github.com/nvim-mini/mini.diff"
     },
     "mini.icons": {
@@ -98,19 +98,19 @@
       "src": "https://github.com/nvim-mini/mini.move"
     },
     "mini.nvim": {
-      "rev": "fdc8b9701616863e44f7a7a0802cfe16bd866539",
+      "rev": "946ae64e0ee807ae3c41f382f0114b4ed4915b2c",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "mini.pairs": {
-      "rev": "b1fd9df3bb4a41c8f45778a3859ee80ef6b367e3",
+      "rev": "b1c5a726921b7a8c9321e9a7a208aa0571de5810",
       "src": "https://github.com/nvim-mini/mini.pairs"
     },
     "mini.surround": {
-      "rev": "5c2a99e43b959055311a4557875985142b672af0",
+      "rev": "8d5d0c5aa92449368ac251e85451d79d8f69d296",
       "src": "https://github.com/nvim-mini/mini.surround"
     },
     "miniharp.nvim": {
-      "rev": "a8fd9dadba00119f1d610936ef694515c448a47c",
+      "rev": "aa7a9a84a7568ac54bf989d909fd36c514ba43ea",
       "src": "https://github.com/vieitesss/miniharp.nvim"
     },
     "multicursor.nvim": {
@@ -128,7 +128,7 @@
       "version": "'fix-invalid-window-id'"
     },
     "nvim-lspconfig": {
-      "rev": "d224a1920728ba129880efc700d4a0180ac4ecbb",
+      "rev": "d592c1e6ad9a0a01b3d5ed3f0345d68407167181",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-navic": {
@@ -148,7 +148,7 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-context"
     },
     "pack-ui.nvim": {
-      "rev": "370f1806ff4e757058c76d3bec5df08b6fb7d39c",
+      "rev": "608fe1139753bc12637837c621fb8e51988a564e",
       "src": "https://github.com/jtprogru/pack-ui.nvim"
     },
     "persistence.nvim": {
@@ -172,7 +172,7 @@
       "src": "https://github.com/folke/sidekick.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "ebf4d8bbc16570817c0f5275468466b9d00b8d7d",
+      "rev": "68861c68f1cf34dab4cdb22f094d4531cd26560a",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "snacks.nvim": {
@@ -216,7 +216,7 @@
       "src": "https://github.com/folke/which-key.nvim"
     },
     "yanky.nvim": {
-      "rev": "020c22d0cfa60358569e49d1d7b91630f175aef0",
+      "rev": "dd6689fdda85f66cab7d9b1a1664625f3be0920d",
       "src": "https://github.com/gbprod/yanky.nvim"
     }
   }

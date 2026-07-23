@@ -83,6 +83,24 @@ opt.autowrite = true -- Enable auto write
 -- only set clipboard if not in ssh, to make sure the OSC 52
 -- integration works automatically.
 opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
+
+-- wl-paste writes "Nothing is copied" to stderr when the Wayland clipboard is
+-- empty (e.g. nothing copied since login). Neovim surfaces that as an error
+-- notification on startup; silence it since it's harmless.
+if not vim.env.SSH_TTY then
+	vim.g.clipboard = {
+		name = "wl-clipboard",
+		copy = {
+			["+"] = "wl-copy",
+			["*"] = "wl-copy --primary",
+		},
+		paste = {
+			["+"] = { "sh", "-c", "wl-paste --no-newline 2>/dev/null || true" },
+			["*"] = { "sh", "-c", "wl-paste --no-newline --primary 2>/dev/null || true" },
+		},
+		cache_enabled = 1,
+	}
+end
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.confirm = true -- Confirm to save changes before exiting modified buffer
