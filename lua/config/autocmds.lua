@@ -144,18 +144,26 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
--- Autosave buffer
--- vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
--- 	group = vim.api.nvim_create_augroup("AutoSave", { clear = true }),
--- 	callback = function()
--- 		local buf = vim.api.nvim_get_current_buf()
---
--- 		vim.api.nvim_buf_call(buf, function()
--- 			vim.cmd("silent! write")
--- 		end)
--- 	end,
--- 	pattern = "*",
--- })
+-- Autosave buffer (debounced)
+local autosave_timer = vim.uv.new_timer()
+vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+	group = vim.api.nvim_create_augroup("AutoSave", { clear = true }),
+	callback = function()
+		local buf = vim.api.nvim_get_current_buf()
+
+		autosave_timer:stop()
+		autosave_timer:start(500, 0, function()
+			vim.schedule(function()
+				if vim.api.nvim_buf_is_valid(buf) then
+					vim.api.nvim_buf_call(buf, function()
+						vim.cmd("silent! write")
+					end)
+				end
+			end)
+		end)
+	end,
+	pattern = "*",
+})
 
 -- remove search highlight when moving the cursor
 vim.api.nvim_create_autocmd("CursorMoved", {
