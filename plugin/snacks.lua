@@ -218,7 +218,7 @@ vim.keymap.set("n", "<leader>fe", function()
 end, { desc = "Explorer" })
 
 vim.keymap.set("n", "<leader><space>", function()
-	Snacks.picker.smart()
+	Snacks.picker.smart({ filter = { cwd = true } })
 end, { desc = "Smart Find Files" })
 
 vim.keymap.set("n", "<leader>n", function()
