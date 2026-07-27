@@ -1,17 +1,5 @@
 vim.pack.add({
-  { src = "https://github.com/jtprogru/pack-ui.nvim" },
+	{ src = "https://codeberg.org/cryptomilk/nvim-pack-ui" },
 }, { confirm = false })
 
-pcall(function()
-  require("pack_ui").setup({
-    border = "rounded",
-    title = " vim.pack ",
-    auto_check = false,
-    auto_update = false,
-    keymaps = {
-      prefix = "<leader>p",
-      status = "s",
-      update_all = "U",
-    },
-  })
-end)
+vim.keymap.set("n", "<leader>ps", "<cmd>Pack<cr>", { desc = "Pack UI" })
