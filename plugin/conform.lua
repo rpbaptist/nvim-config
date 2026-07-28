@@ -16,10 +16,15 @@ require("conform").setup({
 		sh = { "shfmt" },
 		ruby = { "standardrb" },
 	},
-	format_on_save = {
-		timeout_ms = 1000,
-		lsp_format = "fallback",
-	},
+	format_on_save = function(bufnr)
+		if vim.b[bufnr].autosaving then
+			return
+		end
+		return {
+			timeout_ms = 1000,
+			lsp_format = "fallback",
+		}
+	end,
 	["markdown-toc"] = {
 		condition = function(_, ctx)
 			for _, line in ipairs(vim.api.nvim_buf_get_lines(ctx.buf, 0, -1, false)) do

@@ -156,7 +156,9 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
 			vim.schedule(function()
 				if vim.api.nvim_buf_is_valid(buf) then
 					vim.api.nvim_buf_call(buf, function()
+						vim.b[buf].autosaving = true
 						vim.cmd("silent! write")
+						vim.b[buf].autosaving = false
 					end)
 				end
 			end)
