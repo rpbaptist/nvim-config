@@ -120,8 +120,9 @@ local function apply_gruvbox()
     -- against dark's #1d2021 but only ~3.3:1 against light-hard's #f9f5d7,
     -- so comments read as washed out in light mode. Darken it for light only.
     -- "dark1" feeds Normal's fg (and other default-text-tier groups) in
-    -- light mode; darken it one step past gruvbox's own #3c3836 to #282828
-    -- for a slightly darker default text color, per user preference.
+    -- light mode; darken it to gruvbox's own darkest shade, dark0_hard
+    -- #1d2021 (normally dark mode's bg0_hard), for max contrast on prose
+    -- (markdown body text included), per user preference.
     palette_overrides = light and { gray = P.light.gray, dark1 = P.light.fg1 } or {},
   })
   vim.cmd([[colorscheme gruvbox]])
