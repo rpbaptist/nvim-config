@@ -21,6 +21,7 @@ local overrides_spec = {
   ["@punctuation.bracket.elixir"] = { dark = { fg = "#d3869b" }, light = { fg = "#8f3f71" } },
   ["@punctuation.special.elixir"] = { dark = { fg = "#d3869b" }, light = { fg = "#8f3f71" } },
   ["@module.elixir"] = { dark = { fg = "#fabd2f" }, light = { fg = "#b57614" } },
+  ["@keyword.rspec.ruby"] = { bold = true, fg = "#689d6a" },
   gitcommitSummary = { dark = { fg = "#8ec07c" }, light = { fg = "#427b58" } },
   gitcommitBlank = { dark = { fg = "#8ec07c" }, light = { fg = "#427b58" } },
   GitSignsAdd = { dark = { fg = "#8ec07c" }, light = { fg = "#427b58" } },
