@@ -38,8 +38,9 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "fugit2.nvim": {
-      "rev": "7783d338436a60c337a624e22753a50e37df3fa6",
-      "src": "https://github.com/SuperBo/fugit2.nvim"
+      "rev": "eb747eb2700ed0aacbc6a544853be6ec797f6bed",
+      "src": "https://github.com/rpbaptist/fugit2.nvim",
+      "version": "'fix-hide-input-stale-box'"
     },
     "grug-far.nvim": {
       "rev": "6e05398cf6cad05b3fb46569db96b1ccfcbbd402",
@@ -70,7 +71,7 @@
       "src": "https://github.com/iamcco/markdown-preview.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "7adc933dabcc7c86ae6b07aff7ee68eac398491f",
+      "rev": "67029ccdac1ef8941e13b826417bc0ffac24cc86",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason.nvim": {
@@ -82,7 +83,7 @@
       "src": "https://github.com/nvim-mini/mini.ai"
     },
     "mini.diff": {
-      "rev": "b3d8507929f8df54ab9b08c77564c1afd7d62110",
+      "rev": "626b8a5b93874c4d05ca25aedec56cfff0b378fb",
       "src": "https://github.com/nvim-mini/mini.diff"
     },
     "mini.icons": {
@@ -102,7 +103,7 @@
       "src": "https://github.com/nvim-mini/mini.surround"
     },
     "miniharp.nvim": {
-      "rev": "a5a8ff1161a093fba2cbda80f627e8408ba7dd2b",
+      "rev": "c21b5bed7d7cc51c13fa00deb09197d330c8a062",
       "src": "https://github.com/vieitesss/miniharp.nvim"
     },
     "multicursor.nvim": {
@@ -120,7 +121,7 @@
       "version": "'fix-invalid-window-id'"
     },
     "nvim-lspconfig": {
-      "rev": "7ab79bb1b57160a537f427ac8a6026102f12b701",
+      "rev": "43ed3797b266e1ee8d222e491379ad471c9d3146",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-navic": {
@@ -136,15 +137,15 @@
       "src": "https://codeberg.org/cryptomilk/nvim-pack-ui"
     },
     "nvim-recorder": {
-      "rev": "6655abd1cf63938da7bc87b6e28ef549adfa49c5",
+      "rev": "0ef1a24293323b3db2f56edca196f662b6551b1b",
       "src": "https://github.com/chrisgrieser/nvim-recorder"
     },
     "nvim-treesitter": {
-      "rev": "61df84986b4b4ec469ee745a182e433d49f8c27e",
+      "rev": "3d3321b560a63ff92a8692401f303a5123336b86",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-context": {
-      "rev": "b311b30818951d01f7b4bf650521b868b3fece16",
+      "rev": "f3061339b8eaf9fda873600bc425b8d2d8502533",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-context"
     },
     "persistence.nvim": {
@@ -168,7 +169,7 @@
       "src": "https://github.com/folke/sidekick.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "32f67888ac71942442fdab3819864a10449dfc41",
+      "rev": "8c16dc71bf75221793f3f6d83061fee031790c3c",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "snacks.nvim": {
