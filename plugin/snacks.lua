@@ -74,7 +74,7 @@ require("snacks").setup({
 						pcall(require("persistence").load)
 					end,
 				},
-				{ icon = "󰒲 ", key = "p", desc = "Packages", action = ":Pack" },
+				{ icon = "󰒲 ", key = "p", desc = "Packages", action = ":Pack check" },
 				{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 			},
 		},
