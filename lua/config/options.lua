@@ -1,3 +1,4 @@
+require("config.remote_clipboard").setup()
 vim.env.PATH = vim.fn.execute("echo $PATH"):gsub("%s+", "")
 
 vim.g.mapleader = " "
