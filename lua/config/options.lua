@@ -21,6 +21,7 @@ vim.g.lsps = {
 	"marksman",
 	"ts_ls",
 	"yamlls",
+	"basedpyright",
 }
 
 vim.g.custom_icons = {
