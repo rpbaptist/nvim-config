@@ -3,6 +3,12 @@ vim.pack.add({
 }, { confirm = false })
 
 require("conform").setup({
+	formatters = {
+		["google-java-format"] = {
+			-- AOSP style to match this repo's Spotless config (google-java-format.version, <style>AOSP</style>).
+			args = { "--aosp", "-" },
+		},
+	},
 	formatters_by_ft = {
 		lua = { "stylua" },
 		elixir = { "mix_format" },
@@ -15,6 +21,7 @@ require("conform").setup({
 		livebook = { "prettier", "markdownlint-cli2", "markdown-toc" },
 		sh = { "shfmt" },
 		ruby = { "standardrb" },
+		java = { "google-java-format" },
 	},
 	format_on_save = function(bufnr)
 		if vim.b[bufnr].autosaving then

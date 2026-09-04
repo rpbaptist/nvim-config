@@ -10,6 +10,8 @@ require("mason").setup({
     "shfmt",
     "markdownlint-cli2",
     "markdown-toc",
+    "jdtls",
+    "google-java-format",
   },
 })
 

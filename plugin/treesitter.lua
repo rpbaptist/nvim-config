@@ -10,6 +10,7 @@ require("nvim-treesitter").install({
 	"gitcommit",
 	"gitignore",
 	"heex",
+	"java",
 	"jsdoc",
 	"luadoc",
 	"luap",
