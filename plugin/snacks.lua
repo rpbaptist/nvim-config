@@ -44,7 +44,6 @@ require("snacks").setup({
 			{ section = "keys", gap = 1, padding = 1 },
 		},
 		preset = {
-			pick = "fzf-lua",
 			header = [[
         ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
         ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║

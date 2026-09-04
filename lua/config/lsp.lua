@@ -79,11 +79,6 @@ vim.lsp.config("*", {
 			}, params.handler)
 		end, { desc = "From Pipe" })
 
-		-- map("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
-		-- map("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature Documentation" })
-		-- map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
-		-- map("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename" })
-		--
 		if client:supports_method("textDocument/completion") then
 			vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
 		end

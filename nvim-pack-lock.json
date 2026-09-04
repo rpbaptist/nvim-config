@@ -13,10 +13,6 @@
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
     },
-    "codereview.nvim": {
-      "rev": "118333a01fe6e5004d76b715e448602a80431314",
-      "src": "https://github.com/afewyards/codereview.nvim"
-    },
     "conform.nvim": {
       "rev": "016802de402556da54c36bd7359b441266b01cdd",
       "src": "https://github.com/stevearc/conform.nvim"
@@ -102,14 +98,6 @@
       "rev": "8d5d0c5aa92449368ac251e85451d79d8f69d296",
       "src": "https://github.com/nvim-mini/mini.surround"
     },
-    "miniharp.nvim": {
-      "rev": "c21b5bed7d7cc51c13fa00deb09197d330c8a062",
-      "src": "https://github.com/vieitesss/miniharp.nvim"
-    },
-    "noice.nvim": {
-      "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
-      "src": "https://github.com/folke/noice.nvim"
-    },
     "nui.nvim": {
       "rev": "d97c292092fff0bceb5bd1d6007231742033aed6",
       "src": "https://github.com/rpbaptist/nui.nvim",
@@ -126,10 +114,6 @@
     "nvim-navic": {
       "rev": "455808fd0fae06e6d70fadfd61432275db8f34ce",
       "src": "https://github.com/SmiteshP/nvim-navic"
-    },
-    "nvim-notify": {
-      "rev": "8701bece920b38ea289b457f902e2ad184131a5d",
-      "src": "https://github.com/rcarriga/nvim-notify"
     },
     "nvim-pack-ui": {
       "rev": "f36e3cfd4859052b5751c681edb80feed0b87966",
