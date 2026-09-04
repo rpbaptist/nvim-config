@@ -106,11 +106,6 @@
       "rev": "c21b5bed7d7cc51c13fa00deb09197d330c8a062",
       "src": "https://github.com/vieitesss/miniharp.nvim"
     },
-    "multicursor.nvim": {
-      "rev": "704b99f10a72cc05d370cfeb294ff83412a8ab55",
-      "src": "https://github.com/jake-stewart/multicursor.nvim",
-      "version": "'1.0'"
-    },
     "noice.nvim": {
       "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
       "src": "https://github.com/folke/noice.nvim"
@@ -167,10 +162,6 @@
     "sidekick.nvim": {
       "rev": "208e1c5b8170c01fd1d07df0139322a76479b235",
       "src": "https://github.com/folke/sidekick.nvim"
-    },
-    "smart-splits.nvim": {
-      "rev": "0ab2e4928dc867dfea3ff1da186e69f289d8a532",
-      "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "snacks.nvim": {
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
