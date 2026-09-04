@@ -93,4 +93,15 @@ vim.lsp.config("*", {
 	end,
 })
 
+-- lsp/*.lua files merge in runtimepath order, and nvim-lspconfig's own
+-- ruby_lsp.lua loads after ours, so an rtp-file override of init_options
+-- would silently lose to upstream. An explicit vim.lsp.config() call always
+-- wins over rtp-loaded configs, so use that instead.
+vim.lsp.config("ruby_lsp", {
+	init_options = {
+		formatter = "standard",
+		linters = { "standard" },
+	},
+})
+
 vim.lsp.enable(vim.g.lsps)
