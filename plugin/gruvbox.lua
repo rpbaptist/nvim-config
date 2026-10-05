@@ -132,7 +132,7 @@ end
 apply_gruvbox()
 
 local function light_mode_active()
-  return vim.uv.fs_stat(vim.fn.expand("~/.config/omarchy/current/theme/light.mode")) ~= nil
+  return vim.uv.fs_stat(vim.fn.expand("~/.local/state/omarchy/current/theme/light.mode")) ~= nil
 end
 
 vim.api.nvim_create_user_command("ToggleBackground", function()

@@ -7,7 +7,7 @@ vim.g.maplocalleader = ","
 vim.g.kitty_navigator_no_mappings = 1
 vim.g.kitty_navigator_password = "nvimwindows"
 
-vim.o.background = vim.uv.fs_stat(vim.fn.expand("~/.config/omarchy/current/theme/light.mode")) and "light" or "dark"
+vim.o.background = vim.uv.fs_stat(vim.fn.expand("~/.local/state/omarchy/current/theme/light.mode")) and "light" or "dark"
 
 vim.g.lsps = {
   "eslint",
