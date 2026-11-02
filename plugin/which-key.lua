@@ -8,7 +8,9 @@ require("which-key").setup({
   spec = {
     {
       mode = { "n", "v" },
-      { "<leader>a", group = "AI" },
+      { "<leader>a", group = "agent (herdr)" },
+      { "<leader>ac", desc = "Comment line / selection" },
+      { "<leader>ai", desc = "Reference at agent cursor" },
       { "<leader>g", group = "git" },
       { "<leader>tj", group = "Jump to test file" },
       { "<leader>r", group = "Macro recorder" },
@@ -41,6 +43,12 @@ require("which-key").setup({
         end,
       },
       { "gx", desc = "Open with system app" },
+    },
+    {
+      mode = "n",
+      { "<leader>al", desc = "List comments" },
+      { "<leader>as", desc = "Paste comments to agent" },
+      { "<leader>aS", desc = "Submit comments to agent" },
     },
     { "<BS>", desc = "Decrement Selection", mode = "x" },
     { "<c-space>", desc = "Increment Selection", mode = { "x", "n" } },

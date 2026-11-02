@@ -73,7 +73,6 @@ local overrides_spec = {
   NavicIconsEvent = { link = "WinBarYellow" },
   NavicIconsClass = { link = "WinBarYellow" },
   NavicIconsEnumMember = { link = "WinBarYellow" },
-  SidekickChat = { link = "Normal" },
   TabLine = { dark = { fg = "#bdae93", bg = "#504945" }, light = { fg = "#504945", bg = "#d5c4a1" } },
   TabLineSel = { dark = { fg = "#fbf1c7", bg = "#504945" }, light = { fg = "#282828", bg = "#bdae93" } },
   TabLineFill = { dark = { bg = "#1d2021" }, light = { bg = "#f9f5d7" } },
