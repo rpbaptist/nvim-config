@@ -1,5 +1,8 @@
 local M = {}
 
+-- Call before vim.pack.add(): PackChanged fires during add(), so a hook
+-- registered afterwards misses the initial install.
+
 function M.on_build(name, callback)
   local group = vim.api.nvim_create_augroup("PackBuild", { clear = false })
   vim.api.nvim_create_autocmd("PackChanged", {
