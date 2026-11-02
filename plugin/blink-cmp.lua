@@ -2,15 +2,10 @@ vim.pack.add({
   { src = "https://github.com/saghen/blink.cmp", name = "blink.cmp", version = vim.version.range("1.*") },
 }, { confirm = false })
 
-require("utils.pack-build").on_build("blink.cmp", function(path)
-  vim.fn.system({ "cargo", "build", "--release" }, { cwd = path })
-end)
-
 require("blink.cmp").setup({
   fuzzy = { implementation = "prefer_rust_with_warning" },
   snippets = { preset = "luasnip" },
   appearance = {
-    use_nvim_cmp_as_default = false,
     nerd_font_variant = "mono",
   },
   completion = {
@@ -71,7 +66,7 @@ require("blink.cmp").setup({
   },
   keymap = {
     preset = "super-tab",
-    ["<Esc"] = { "hide", "fallback" },
+    ["<Esc>"] = { "hide", "fallback" },
     ["<Tab>"] = {
       function(cmp)
         if cmp.snippet_active() then
@@ -85,25 +80,3 @@ require("blink.cmp").setup({
     },
   },
 })
-
-pcall(function()
-  for _, provider in pairs(require("blink.cmp").config.sources.providers or {}) do
-    if provider.kind then
-      local CompletionItemKind = require("blink.cmp.types").CompletionItemKind
-      local kind_idx = #CompletionItemKind + 1
-      CompletionItemKind[kind_idx] = provider.kind
-      CompletionItemKind[provider.kind] = kind_idx
-
-      local transform_items = provider.transform_items
-      provider.transform_items = function(ctx, items)
-        items = transform_items and transform_items(ctx, items) or items
-        for _, item in ipairs(items) do
-          item.kind = kind_idx or item.kind
-          item.kind_icon = vim.g.custom_icons.kinds[item.kind_name] or item.kind_icon or nil
-        end
-        return items
-      end
-      provider.kind = nil
-    end
-  end
-end)
