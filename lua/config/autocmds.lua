@@ -34,23 +34,6 @@ vim.api.nvim_create_autocmd("VimResized", {
 	end,
 })
 
--- resize splits when terminal is opened (ergoterm support)
-vim.api.nvim_create_autocmd({ "WinNew", "BufAdd", "TermOpen", "BufEnter" }, {
-	group = augroup("terminal_resize_splits"),
-	callback = function()
-		if vim.bo.buftype == "terminal" then
-			-- Only resize if not a horizontal split (below layout)
-			local win_height = vim.api.nvim_win_get_height(0)
-			local total_height = vim.o.lines
-			-- Skip resize if this appears to be a horizontal split (below layout)
-			-- Horizontal terminals typically have small height relative to total height
-			if win_height / total_height > 0.3 then -- Only resize if height is more than 30% of screen
-				resize_splits()
-			end
-		end
-	end,
-})
-
 -- go to last loc when opening a buffer
 vim.api.nvim_create_autocmd("BufReadPost", {
 	group = augroup("last_loc"),
