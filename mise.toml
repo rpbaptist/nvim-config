@@ -1,3 +1,7 @@
 [tools]
 # Important for image.nvim
 lua = "5.1"
+
+[env]
+# Use the personal GitHub account here; the machine default is richardbaptist.
+GH_TOKEN = "{{ exec(command='/usr/bin/gh auth token --user rpbaptist', cache_duration='24h') }}"
